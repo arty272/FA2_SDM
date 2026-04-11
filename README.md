@@ -189,15 +189,9 @@ Reports
      ↓
 Logout → Return to Login Screen
 
-# Screenshots (Recommended for Submission)
-
-Add screenshots here after running your application.
-
-Example structure:
+# Screenshots Example structure
 
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/d5a1058d-4a14-43b1-ba70-9cee13c3f859" />
-
-
 
 # Learning Outcomes Demonstrated
 
@@ -240,11 +234,13 @@ Build → Rebuild Solution
 Developed by
 
 **Lusukama Selemani**
+
 ICT Senior Lecturer
+
 Microsoft Certified Trainer (MCT)
+
 Software Development Instructor
 
----
 
 # License
 
