@@ -1,3 +1,11 @@
+# 🎓 Umoja Learning Management System (ULMS) WinForms App
+
+![.NET](https://img.shields.io/badge/.NET-10.0-purple)
+![Windows Forms](https://img.shields.io/badge/WindowsForms-DesktopApp-blue)
+![C#](https://img.shields.io/badge/C%23-Developer-green)
+![Visual Studio](https://img.shields.io/badge/IDE-VisualStudio-orange)
+![Status](https://img.shields.io/badge/Status-In%20Progress-blue)
+![License](https://img.shields.io/badge/License-Portfolio-lightgrey)
 # ULMS WinForms App Client
 
 ## Overview
