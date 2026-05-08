@@ -18,16 +18,35 @@ namespace ULMSWinFormsApp.Forms
 
         private void btnCalculateResults_Click(object sender, EventArgs e)
         {
-            // Intentional weak validation and faulty average logic for testing purposes
             MarkRecord record = new MarkRecord();
 
             record.StudentId = txtMarkStudentId.Text;
             record.StudentName = txtMarkStudentName.Text;
-            record.Subject1 = Convert.ToDouble(txtSubject1.Text);
-            record.Subject2 = Convert.ToDouble(txtSubject2.Text);
-            record.Subject3 = Convert.ToDouble(txtSubject3.Text);
 
-            // Fixed the average calculation to ensure correct operator precedence
+            // Validate and parse marks using TryParse
+            if (!double.TryParse(txtSubject1.Text, out double subject1) || subject1 < 0 || subject1 > 100)
+            {
+                MessageBox.Show("Subject 1 must be a valid number between 0 and 100.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (!double.TryParse(txtSubject2.Text, out double subject2) || subject2 < 0 || subject2 > 100)
+            {
+                MessageBox.Show("Subject 2 must be a valid number between 0 and 100.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (!double.TryParse(txtSubject3.Text, out double subject3) || subject3 < 0 || subject3 > 100)
+            {
+                MessageBox.Show("Subject 3 must be a valid number between 0 and 100.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            record.Subject1 = subject1;
+            record.Subject2 = subject2;
+            record.Subject3 = subject3;
+
+            // Calculate average
             record.Average = (record.Subject1 + record.Subject2 + record.Subject3) / 3;
 
             if (record.Average >= 50)
